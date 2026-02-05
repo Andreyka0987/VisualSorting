@@ -9,7 +9,7 @@
 
 int main()
 {
-    
+    restart:
     makeSpace();
     std::cin.clear();
     std::cout << "Enter integers without spacebars:" << std::endl;
@@ -60,7 +60,16 @@ int main()
 
 
     
-    
+    std::cout << "Again?" << std::endl;
+    char yesOrNo;
+    std::cin >> yesOrNo;
+
+    if (yesOrNo == 'y'){
+        goto restart;
+    }
+    else {
+        exit;
+    }
 
     
     

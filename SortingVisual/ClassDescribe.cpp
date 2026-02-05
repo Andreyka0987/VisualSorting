@@ -84,7 +84,7 @@ void sortingAlgoritms::bubbleSort(std::vector<int>& arr) {
 
     for (int i = 0; i < arr.size(); i++)
     {
-        for (int j = i+1; j < arr.size(); j++)
+        for (int j = 1; j < arr.size(); j++)
         {
             if (arr[j - 1] > arr[j]) {
                 int temp = arr[j - 1];
