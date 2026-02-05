@@ -70,7 +70,7 @@ void sortingAlgoritms::selectSort(std::vector<int>& arr) {
 
                 makeSpace();
                 CalcFuncs::printGraph(arr);
-                std::this_thread::sleep_for(std::chrono::seconds(1));
+                std::this_thread::sleep_for(std::chrono::milliseconds(sortingAlgoritms::TIME_TO_SORT));
 
             }
         }
@@ -93,7 +93,7 @@ void sortingAlgoritms::bubbleSort(std::vector<int>& arr) {
 
                 makeSpace();
                 CalcFuncs::printGraph(arr);
-                std::this_thread::sleep_for(std::chrono::seconds(1));
+                std::this_thread::sleep_for(std::chrono::milliseconds(sortingAlgoritms::TIME_TO_SORT));
             }
         }
 

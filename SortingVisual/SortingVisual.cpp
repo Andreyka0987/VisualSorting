@@ -20,12 +20,6 @@ int main()
         std::cin.clear();
         std::cin.ignore(35678,'\n');
     }
-    makeSpace();
-    std::cout << "Chose sort algoritm:\n" << "b - bubblesort " << "s -selectsort" << std::endl;
-
-
-
-
     
     std::vector<int> arrOfNumbers;
 
@@ -35,8 +29,41 @@ int main()
         }
     }
 
+
+    makeSpace();
+    again:
+    std::cout << "Chose sort algoritm:\n" << "b - bubblesort " << "s -selectsort" << std::endl;
+    char input;
+    std::cin >> input;
     
-    sortingAlgoritms::selectSort(arrOfNumbers);
+    if (std::cin.fail())
+    {
+        std::cin.clear();
+        std::cin.ignore(35678, '\n');
+        std::cout << "Something gone wrong";
+            goto again;
+    }
+
+    switch (input) {
+    case('b'):
+        sortingAlgoritms::bubbleSort(arrOfNumbers);
+        break;
+    case('s'):
+        sortingAlgoritms::selectSort(arrOfNumbers);
+        break;
+    default:
+        std::cout << "You made a mistake" << std::endl;
+        goto again;
+        break;
+    }
+
+
+
+    
+    
+
+    
+    
 
     
     return 0;
